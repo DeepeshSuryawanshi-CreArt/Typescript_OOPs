@@ -109,9 +109,20 @@ class Course{
         this.students.forEach((student)=>console.log(`${student.showDetails()}`))
     }
 }
-let Strive = new Teacher("Strive","strive@gmail.com",28,1101,"Data Stracture and Algorithem",["DAS"])
+// teachers
+let Hitesh_choudhary = new Teacher("Hitesh Cgoudhary","Hitesh.ai@hc.com",35,1101,"Web Development Javascript / Typescript",["Web Development"])
+let Strive = new Teacher("Strive","strive@gmail.com",28,1102,"Data Stracture and Algorithem",["DSA"])
+Hitesh_choudhary.GiveAssignment("Web Dev Cohot")
+Strive.GiveAssignment("DSA Sheet")
+// student
+let Dhammu = new Student("Dharmandre yadav","DhammuYadavji@youpmail.com",35,1234,60,["Data Science"])
+let Deepesh = new Student("Deepesh Suryawanshi","Deepesh.ai@Hc.com",22,1784,80,["Web Development"])
+Dhammu.enrollCourses("DSA")
+Deepesh.enrollCourses("Web Development")
 
-let DAS = new Course("Data Stracture and Algorithem",[stu1],)
+// coursers
+let DSA = new Course("Data Stracture and Algorithem",[Dhammu],Strive)
+let Web_dev = new Course("Web Development",[Deepesh],Strive)
+DSA.addStudent(Deepesh)
 
-
-let stu1 = new Student("Dharmandre yadav","DhammuYadavji@youpmail.com",35,1234,60,["Data Science"])
+Deepesh.showDetails()
