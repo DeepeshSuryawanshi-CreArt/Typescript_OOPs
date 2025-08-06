@@ -60,6 +60,7 @@ class Student extends Person {
     this.course.push(courserName);
   }
   showDetails(): void {
+    super.showDetails()
     console.log(
       `Student Roll No:${this.rollNo}  grade:${this.grade} courses:${this.course}`
     );
@@ -124,5 +125,5 @@ Deepesh.enrollCourses("Web Development")
 let DSA = new Course("Data Stracture and Algorithem",[Dhammu],Strive)
 let Web_dev = new Course("Web Development",[Deepesh],Strive)
 DSA.addStudent(Deepesh)
-
+Web_dev.listStudents()
 Deepesh.showDetails()
