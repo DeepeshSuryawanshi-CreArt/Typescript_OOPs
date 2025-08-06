@@ -1,0 +1,70 @@
+
+| Concept            | You Learned Through...                                                                |
+| ------------------ | ------------------------------------------------------------------------------------- |
+| **Encapsulation**  | Keeping class properties like `password` private and exposing methods to access them. |
+| **Abstraction**    | Using `abstract` classes and forcing derived classes to implement `abstract` methods. |
+| **Inheritance**    | Extending a base class (`Admin` → `User`) and reusing its logic.                      |
+| **Polymorphism**   | Overriding methods like `login()` and `greet()` in subclasses with custom behavior.   |
+| **Static Members** | Using `static` methods and properties like `Counter.count` and `Counter.increment()`. |
+
+Now that you’re comfortable with these OOP concepts, we can move into advanced class features in TypeScript, including:
+
+🔜 Next Topics:
+Access Modifiers (public, private, protected) – Full Control
+1. Readonly Properties
+2. Getters and Setters
+3. Interfaces vs Abstract Classes – When to Use What
+4. Generic Classes
+5. Real-world OOP Example (Project-based)
+
+🔐 Access Modifiers in TypeScript
+Access modifiers control how you access properties and methods from inside or outside a class.
+| Modifier    | Where can it be accessed?                            | Use case example                          |
+| ----------- | ---------------------------------------------------- | ----------------------------------------- |
+| `public`    | ✅ Anywhere (default)                                 | General properties/methods like `name`    |
+| `private`   | ❌ Only inside the same class                         | Hide sensitive data like `password`       |
+| `protected` | ✅ Inside the same class AND subclasses (child class) | Allow access in inheritance like `salary` |
+
+
+👨‍🏫 Concept: Inheritance in TypeScript
+Inheritance allows one class to use the properties and methods of another class.
+🔹 extends keyword is used to inherit a class.
+🔹 The base class is also called parent or superclass.
+🔹 The inherited class is called child or subclass.
+
+
+✅ 4. Abstraction in TypeScript
+👉 What is Abstraction?
+Abstraction means hiding the internal implementation details and showing only the essential features of an object.
+
+You achieve this in TypeScript using:
+1. abstract classes and
+2. abstract methods
+3. These act like a blueprint for other classes.
+
+
+✅ 4. Polymorphism in TypeScript
+👉 What is Polymorphism?
+Polymorphism means many forms — it allows objects to behave differently based on their specific type, even if they share the same interface or parent class.
+
+What is an Interface?
+An interface is like a contract that defines the shape (structure) of an object or class — what properties and methods it should have.
+
+Interfaces don’t contain any logic — just the "what", not the "how".
+| Feature                | Interface       | Abstract Class         |
+| ---------------------- | --------------- | ---------------------- |
+| Can have method bodies | ❌ No            | ✅ Yes                  |
+| Multiple inheritance   | ✅ Yes           | ❌ No                   |
+| Used to define         | Structure/Shape | Blueprint + Base Logic |
+| Instantiable directly  | ❌ No            | ❌ No                   |
+| Can extend other types | ✅ Yes           | ✅ Yes (only one class) |
+
+
+
+🔄 Encapsulation in TypeScript
+Encapsulation means hiding the internal state of an object and requiring all interactions to go through methods.
+
+It's like how you operate a TV using a remote — you don't need to know how it works internally. Just press the buttons!
+✅ Key Concepts:
+Use private or protected to restrict direct access.
+Use getter and setter methods to allow controlled access.
